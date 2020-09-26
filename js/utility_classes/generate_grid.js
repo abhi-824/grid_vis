@@ -47,22 +47,34 @@ function generate_grid() {
         cell[310].classList.add("end");
         
   // console.log(cell);
-  let p=0;
+  let p=0;let isdrawing=false;
   for (let i = 0; i < cell.length; i++) {
-    cell[i].addEventListener("mouseover", function (e) {
+    cell[i].addEventListener("mousedown", function (e) {
       if(cell[i].innerHTML===''){
         cell[i].style.background = "teal";
+        isdrawing=true;
         cell[i].classList.add("obst");
       }
     });
+    cell[i].addEventListener("mousemove", function (e) {
+      if(cell[i].innerHTML===''&&isdrawing==true){
+        cell[i].style.background = "teal";
+        isdrawing=true;
+        cell[i].classList.add("obst");
+      }
+    });
+    
+    cell[i].addEventListener("mouseup", function (e) {
+      isdrawing=false;
+    });
     cell[i].addEventListener("click", function (e) {
-        cell[i].style.background = "white";
+        cell[i].style.background = document.body.background;
         cell[i].classList.add("src");
         cell[275].innerHTML='';
         cell[i].innerHTML="<i class='fas fa-hand-point-right fa-2x'>";
 
 
-        cell[p].innerHTML='';
+        cell[p].innerHTML=''; 
         cell[i].classList.remove("obst");
         cell[p].classList.add("obst");
         cell[p].classList.remove("src");

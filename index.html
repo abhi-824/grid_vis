@@ -1,54 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Visualisers</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <!-- JQuery -->
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-</head>
-<body>
-    <nav class="navbar navbar-fixed-top navbar-default">
-        <button class="btn btn-red btn-large reset">Reset Grid</button>
-        
-        <p>Speed of the algorithm:</p>
-            <input id="a_speed" type="range" min=1 max=5 step=1 value=4 >
-        <button class="btn btn-secondary "><i class="fas fa-magic mr-1 dij"></i>Dijkstara's</button>
-        <button class="btn btn-secondary a_star"><i class="fas fa-magic mr-1"></i>A*</button>
-        <button class="btn btn-secondary bfs"><i class="fas fa-magic mr-1"></i>BFS</button>
-        <button class="btn btn-secondary dfs "><i class="fas fa-magic mr-1"></i>DFS</button>
-    </nav>
-    <!-- <div class="tutorial">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="shortcut icon"
+			href="res/DTU,_Delhi_official_logo.png"
+			type="image/x-icon"
+		/>
+		<title>Delhi TechNostaliga</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	</head>
+	<body>
+		<video autoplay muted loop id="dtuTour">
+			<source src="res/tour.mp4" type="video/mp4" />
+		</video>
+		<div class="container">
+			<h1>Welcome to The Heart Of Delhi:</h1><h1>DELHI TECHNOLOGICAL UNIVERSITY</h1>
 
-    </div> -->
-
-    <table id="grid">
-
-    </table>
-    <script src="js/utility_classes/generate_grid.js"></script>
-    <script src="js/utility_classes/generating_x_y.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/algorithms/a_star.js"></script>
-    <script src="js/algorithms/bfs.js"></script>
-    <script src="js/algorithms/dfs.js"></script>
-    <script src="js/algorithms/dijkstaras.js"></script>
-    <script src="js/animations/vis.js"></script>
-</body>
+			<div class="content2">
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/oat.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Open Air Theatre</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/lib.jpeg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Library</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/clock_oat.jpeg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Clock Tower</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/MAIN-FRAME.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Exit</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/ssr.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h2>The Most loved Allumini</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/SPORTS.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Sports Complex</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/hostel2.jpeg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Sports Complex</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/BR_AUDI.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Sports Complex</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+				<!-- <div class="card">
+					<div class="imgBx">
+						<img src="res/sport.jpeg" alt="">
+					</div>
+					<div class="content">
+						<h2>Sports Complex</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex, magni voluptatibus officia illum quae quod beatae optio qui sunt reprehenderit illo cumque? Iure libero deserunt asperiores? Qui temporibus maxime error!</p>
+					</div>
+				</div> -->
+				<div class="card">
+					<div class="imgBx">
+						<img src="res/BLOCK.jpg" alt="" />
+					</div>
+					<div class="content">
+						<h2>Sports Complex</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex,
+							magni voluptatibus officia illum quae quod beatae optio qui sunt
+							reprehenderit illo cumque? Iure libero deserunt asperiores? Qui
+							temporibus maxime error!
+						</p>
+					</div>
+				</div>
+			</div>
+			<a href="graph_vis.html">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Start the Tour
+			</a>
+			<footer>
+				<p>Made with <i class="fa fa-heart" style="color:red" aria-hidden="true"></i> By Abhinandan Sharma</p>
+      
+	</footer>
+		</div>
+	</body>
 </html>
